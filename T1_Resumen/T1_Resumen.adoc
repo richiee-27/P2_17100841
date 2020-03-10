@@ -1,0 +1,3 @@
+== Resumen del primer parcial
+==== Descripcion del modelo de caja
+Es la manera en la cuál representamos los elementos de html en una página de manera rectangular, cada elemento que declaramos genera una caja, su comportamiento se puede manipular por las propiedades: *width*, *height*, *padding*, *margin*, *border*, *background*.
