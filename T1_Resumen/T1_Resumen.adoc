@@ -1,3 +1,114 @@
-== Resumen del primer parcial
-==== Descripcion del modelo de caja
+= Resumen del primer parcial
+
+=== *_Descripcion del modelo de caja_*
 Es la manera en la cuál representamos los elementos de html en una página de manera rectangular, cada elemento que declaramos genera una caja, su comportamiento se puede manipular por las propiedades: *width*, *height*, *padding*, *margin*, *border*, *background*.
+
+*Content:* se trata de todo el contenido HTML del elemento lo que se refiere a las palabras de un párrafo, una imágen, el texto de una lista de elementos, etc.
+
+*Padding:* Es el espacio libre en su caso opcional que existe entre el contenido y el borde.
+
+*Border:* Es la línea que encierra completamente el content y su relleno.
+
+*Margin:* es la seperación que existe entre la caja y las cajas que son adyacentes a ella.
+
+*Outline:* se utiliza para establecer las mismas propiedades a todos los perfiles de un elemento.
+
+=== *_Explicación de la propiedad Display_*
+La propiedad display es la que define el tipo de caja que genera un elemento, por lo tanto se encarga del comportamiento de los elementos y como se comportan con respecto a otros elementos adyacentes.
+
+*Block:* Este valor se trata de un elemento con comportamiento en bloque, esto quiere decir que el elemento no permitirá la ubicación de elementos adyacentes.
+
+*Inline:* este valor se comporta como elementos en línea, a lo que nos referimos que estos elementos permiten la ubicación de elementos adyacentes.
+
+*Inline-Block:* Es valor es la combinación de Block e Inline, lo que quiere decir que pueden tener un elemento con línea y en bloque.
+
+*None:* Nos funciona para indicar que el elemento no genera ninguna caja, es decir el elemento deja de ocupar espacio.
+
+*Box-Sizing:* esta propiedad nos debe calcular el ancho y el total de un elemento.
+
+*Content-box:* es el tamaño por defecto de la caja (Box-Sizing), depende la cantidad de pixeles que se le asignen la caja del contenido de ese elemento tendrá esos pixeles de ancho.
+
+*Border-box:* le dice al navegador tomar en cuenta para cualquier valor que se especifique de borde o de relleno para el ancho o alto de un elemento.
+
+=== *_Concepto flujo de documento_*
+El flujo es la manera en como se van colocando los componentes de la página. El flujo es respecto a la colocación de los elementos en el lugar que les corresponda según su declaración en el código. 
+
+=== *_Tipos de posicionamientos_*
+*Static:* No provoca ningún posicionamiento especial de los elementos, por lo tanto los elementos se colocarán según el flujo normal del HTML, según estén escritos en el propio código.
+
+*Relative:* Su posición dependerá del lugar donde esté en el código y el flujo de HTML. Nos indica que la capa si forma parte del flujo normal de los elementos de la página .
+
+*Absolute:* la posición absolute nos permite posicionar elementos de manera definida por los valores de los atributos top, left, bottom y right, que inidican la distancia con respecto a un punto.
+
+*Fixed:* Este atributo nos sirve para posicionar de manera fija el elemento, aún así desplazemos para página el elemento se mantendrá en la misma posición.
+
+*Sticky:* Este atributo se coloca en función de la posición de desplazamiento del usuario. Es conocido como pegajoso porque al momento de desplazar hacia abajo en la página se pega hasta quedar en posición fija.
+
+=== *_Unidades de medida en CSS_*
+*Unidades absolutas:* Es un tipo de medida fija que no cambia, ya que su valor no depende de otro valor de referencia.
+
+*Unidades relativas:* a diferencia de las absolutas no estan completamente definidas, por lo que su valor está referenciado respecto a otro valor. + 
+A continuación las tres unidades de medida relativas definidas por CSS. +
+*em:* Es relativa con respecto al tamaño de la letra del elemento. +
+*rem:* es muy similar a em con la diferencia de que no es escalable, lo que quiere decir que no depende del elemento padre si no más bien del elemento raíz del documento. +
+*Px:* es relativa respecto a la resolución de la pantalla de la cuál se está visualizando el documento HTML.
+
+=== *_Selectores básicos:_*
+*De etiqueta:* selecciona aquellos elementos de la página cuya etiqueta de HTML coincida con el valor del selector.
+
+*ID:* permite seleccionar un elemento de la página através de su atributo id, solo pueden seleccionar un elemento de la página. 
+
+*Clase:* Es una solución más factible para aplicar estilos a un solo elemento de la página.
+
+=== *_Selectores de relación:_*
+*Selector descenciente (Espacio):* este selector le da estilos a uno o más elementos que se encuentran dentro de otros. Sin importar profundidad.
+
+*Selector de hijo (>):* Para aplicar este selector tiene que ser hijo directo del elemento y no va más profundo.
+
+*Selector adyacente de hermanos (+):* le da estilos al elemento que sea hermano de otro elemento, lo que quiere decir que los dos tengan el mismo padre.
+
+*Selector general de hermanos (~):* Este selector es totalmente igual al selector de hermanos, pero con la diferencia que se toman en cuenta los hermanos del hijo1.
+
+=== PseudoSelectores
+Una pseudoclase se usa especialmente para definir un estado especial a un elemento. Un ejemplo sencillo que se puede tomar por ejemplo cuando diseñamos un elemento y el usuario pase el mouse sobre él agua una acción.
+
+==== _Ejemplos de pseudoclase:_
+ 
+*:Hover:* se activa cuando el usuario pasa el cursor o cualquier otro elemento que apunte por encima de un elemento.
+
+*:active:* Se acciona cuando el usuario le da click sobre un elemento, el tiempo es imperceptible porque se deja de accionar hasta el usuario suelta el botón.
+
+*:focus:* Es muy utilizado en los formularios cuando están seleccionados, porque nos permite saber que input esta activo.
+
+*:first-child* Esta pesudoclase selecciona el primer elemento elemento hijo de un elemento. Utilizado para cambiar ciertar palabras de un texto de un color diferente.
+
+=== PseudoElementos 
+A diferencia de las pseudoclasses, los pseudoelementos no describen un estado especial, por lo tanto permiten añadir estilos a una parte concreta del documento.
+
+==== _Ejemplos de pseudoelementos_
+*::after* Se refiere al último hijo del elemento seleccionado. +
+*::Before* Este pseudoelemento se refiere al primer hijo seleccionado. +
+*::backdrop* Este pseudoelemento es básicamente una caja que se muestra inmediatamente debajo del elemento.
+
+*::spelling-error* representa un segmento de texto que se le notifica al usario cuando haya algún problema.
+
+=== _Descripción de cascada y sus niveles_
+La cascada es la forma en la que nuestros navegadores van a resolver las declaraciones de CSS que estén compitiendo. +
+*Sus niveles son:*
+
+* Importancia
+* Origen
+* Especificidad
+* Posición
+
+=== _Especificidad_
+Es la manera para determinar a los navegadores que valores de una propiedad CSS son más relevantes para un elemento y, por lo tanto, serán aplicados.
+
+_El orden de prioridad va de la siguiente manera, de menor a mayor especificidad:_
+
+* Selectores de título (p.ej *P*) y pesudo-elementos (p.ej *:before*)
+* Selectores de clase (p.ej: *.ejemplo*), selectores de atributos (p.ej: *[type="text"]* y pseudo-clases (p.ej: *:focus*)
+* Selectores ID (p.ej: *#ejemplo*)
+
+Pero hay que tener cuidado con el uso de *!Important*
+la declaración *!Important* ignora por completo la especificidad del resto, porque es la que más peso tiene. por lo que rompe con las reglas de CSS.
